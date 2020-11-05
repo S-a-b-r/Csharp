@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp12.animals
+{
+    public class Animal
+    {
+        int satiety;
+        int thirst;
+        public string name;
+        string sex;
+        int age;
+        string type; //Травоядный, хищник или всеядный;
+        bool alive;
+
+        public Animal(string Name,string Sex,int Age, string Types) {
+            satiety = 100;
+            thirst = 0;
+            name = Name;
+            sex = Sex;
+            age = Age;
+            type = Types; //Травоядный, хищник или всеядный;
+            alive = true;
+        }
+        public void death()
+        {
+            alive = false;
+            Console.WriteLine("К сожалению, ваше животное " + name + " умерло");
+        }
+
+        public void eat()
+        {
+            satiety += 10;
+            Console.WriteLine("Ваше животное " + name + " поело");
+        }
+
+        public void live()
+        {
+            satiety -= 1;
+            thirst += 1;
+        }
+    }
+}
