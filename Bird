@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp12.animals
+{
+    public class Bird:Animal
+    {
+       public int weight;
+        string size;
+        bool canFly;
+        string kind;
+        public Bird(string Name, string Sex,int Age, string Types,int Weight,string Size, bool CanFly, string Kind) : base(Name, Sex, Age, Types)
+        {
+            weight = Weight;
+            size = Size;
+            canFly = CanFly;
+            kind = Kind;
+        }
+        
+        public void fly()
+        {
+            if (canFly)
+            {
+                Console.WriteLine("Юху, мы летаем");
+            }
+            else
+            {
+                Console.WriteLine("К сожалению, данный вид не умеет летать");
+            }
+        }
+
+        public void sing()
+        {
+            Console.WriteLine("Чик-чирик!");
+        }
+        
+    }
+}
