@@ -1,18 +1,18 @@
+using ConsoleApp12.animals;
 using System;
 
-namespace dotNet
+
+namespace ConsoleApp12
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            int[,] matrix = new int[5,5];
-            for(int i=0; i<5; i++){
-                for(int j=0; j<5; j++){
-                    matrix[i, j] = rnd.Next(0,20);
-                }
-            }
+            var monkey = new Animal("Andrey", "male", 18,"veg");
+            var bird1 = new Bird("andrey", "male", 18, "veg", 1, "S", true, "Sinichka");
+            bird1.fly();
+            Console.WriteLine(bird1.name);
+            Console.ReadLine();
         }
     }
 }
